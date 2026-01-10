@@ -10,7 +10,7 @@ final class Rectangle implements Shape {
     double width, height;
 }
 
-final class Triangle implements Shape {}
+//final class Triangle implements Shape {}
 
 public class SealedSwitch {
     double area(Shape shape) {
