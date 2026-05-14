@@ -1,0 +1,16 @@
+You have an employee table with emp_id, emp_name, salary, department
+Write SQL Server query to:
+ - Find highest salary from each department
+ - Return employee name also
+---------------------------------------------------------------------
+select e.emp_name, e.department, e.salary
+from employee e
+join(
+    select department, max(salary) as max_salary
+    from employee
+    group by department
+) d
+
+on e.department = d.department
+and e.salary = d.max_salary
+---------------------------------------------------------------------
