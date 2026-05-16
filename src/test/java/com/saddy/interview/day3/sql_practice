@@ -1,0 +1,23 @@
+ You have an employee table:
+
+ emp_id	emp_name	salary
+
+ Write SQL query to fetch the second highest salary.
+
+ Bonus:
+
+ Solve using:
+ Subquery
+ Dense Rank
+ ------------------------------------------------
+ Solution 1:
+ ----
+ select max(salary) from employee
+    where salary < (select max(salary) from employee)
+ ----
+ Solution 2:
+ select salary from(
+    select salary, dense_rank() over (order by salary desc) as salary_rank
+    from employee
+ ) ranked where salary_rank = 2
+ ----
