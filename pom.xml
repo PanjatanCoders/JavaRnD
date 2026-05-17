@@ -44,6 +44,26 @@
           <version>5.4.0</version>
           <scope>test</scope>
       </dependency>
+      <!-- Jackson -->
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>2.21.0</version>
+      </dependency>
+      <!-- If you use Java 8+ date/time types -->
+      <dependency>
+          <groupId>com.fasterxml.jackson.datatype</groupId>
+          <artifactId>jackson-datatype-jsr310</artifactId>
+          <version>2.20.2</version>
+      </dependency>
+
+      <!-- Rest Assured -->
+      <dependency>
+          <groupId>io.rest-assured</groupId>
+          <artifactId>rest-assured</artifactId>
+          <version>6.0.0</version>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
     <build>
         <plugins>

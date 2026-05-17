@@ -1,0 +1,13 @@
+SQL Question
+
+Employee table:
+
+emp_id, emp_name, salary
+
+Write SQL query to fetch the third highest salary.
+
+Bonus:
+Solve using DENSE_RANK()
+----------------------------------------------------
+select salary from (select salary, dense_rank() over (order by salary desc) as rank from employee)
+ranked where rank = 3
