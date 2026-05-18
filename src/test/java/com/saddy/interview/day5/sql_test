@@ -1,0 +1,19 @@
+SQL Question
+
+Employee table: emp_id, emp_name, salary, department
+
+Write SQL query to fetch:
+
+employee name
+salary
+department
+employees whose salary is greater than average salary of their department
+
+Expected concepts:
+
+AVG()
+GROUP BY
+subquery / join
+-------------------------------------------------------------
+select e.emp_name, e.salary, e.department from employee e
+where salary > (select avg(e2.salary) from employee e2 where e.department = e2.department)

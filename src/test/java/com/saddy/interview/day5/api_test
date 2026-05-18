@@ -1,0 +1,20 @@
+API Question (POJO + Deserialization Focus)
+Given API response:
+{
+  "name":"Saddam",
+  "age":35,
+  "city":"Pune"
+}
+
+Tasks:
+
+Create POJO class
+Convert JSON → Java object using ObjectMapper
+Print values using getter methods
+
+Expected concepts:
+
+readValue()
+default constructor
+getters/setters
+-------------
