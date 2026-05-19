@@ -1,0 +1,26 @@
+SQL Question
+
+Employee table:
+
+emp_id	emp_name	salary	department
+
+Write SQL query to fetch:
+
+employee name
+salary
+rank of employee within their department based on salary
+
+Expected concepts:
+
+DENSE_RANK()
+PARTITION BY
+-------------------------------------------------
+SELECT
+    emp_name,
+    salary,
+    department,
+    DENSE_RANK() OVER (
+        PARTITION BY department
+        ORDER BY salary DESC
+    ) AS dept_rank
+FROM Employee;
